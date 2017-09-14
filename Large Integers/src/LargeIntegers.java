@@ -21,13 +21,18 @@ public class LargeIntegers{
 		int[] result = new int[30];
 		int carry = 0;
 		
-		for(int i = N-1; i >=0; i++){
-			if(a[i] + b[i] + carry < 10){
-				result[i] = a[i] + b[i] + carry;
+		int aVal = a[N-1];
+		int bVal = b[N-1];
+		
+		for(int i = N-1; i >=0; i--){
+			aVal = a[i];
+			bVal = b[i];
+			if(aVal + bVal + carry < 10){
+				result[i] = aVal + bVal + carry;
 				carry = 0;
 			}
 			else {
-				result[i] = (a[i] + b[i] + carry)-10;
+				result[i] = (aVal + bVal + carry)-10;
 				carry = 1;
 			}
 		}
