@@ -13,8 +13,8 @@ public class LargeIntegers{
 	
 	/**
 	 * 
-	 * @param a
-	 * @param b
+	 * @param a array to add
+	 * @param b array to add
 	 * @return int[] of result of a+b
 	 */
 	public static int[] add(int[] a, int[] b){
